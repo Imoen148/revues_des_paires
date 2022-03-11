@@ -40,3 +40,16 @@ def category (imc_user):
 
 imc_user = imc ()
 category(imc_user)
+
+# mélange entre métrique et impérial mais bonne idée d'avoir le poids en lbs, plus commun.
+# Je ne savais même pas qu'on pouvait mettre une fonction avec ou sans espace devant la parenthèse.
+# fonction() ou fonction ()
+# Personnellement j'ai le réflexe de toujours tout faire ultra court, mais j'ai rien à dire.
+# 
+# ██████╗░██████╗░░█████╗░██╗░░░██╗░█████╗░██╗██╗██╗
+# ██╔══██╗██╔══██╗██╔══██╗██║░░░██║██╔══██╗██║██║██║
+# ██████╦╝██████╔╝███████║╚██╗░██╔╝██║░░██║██║██║██║
+# ██╔══██╗██╔══██╗██╔══██║░╚████╔╝░██║░░██║╚═╝╚═╝╚═╝
+# ██████╦╝██║░░██║██║░░██║░░╚██╔╝░░╚█████╔╝██╗██╗██╗
+# ╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝░░░╚═╝░░░░╚════╝░╚═╝╚═╝╚═╝
+#
