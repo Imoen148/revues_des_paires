@@ -13,3 +13,8 @@ def calculatrice_float():
     print(f"Le résultat de la division de vos nombres est {(nb_1 / nb_2):.3f}")
     
 calculatrice_float()
+
+
+
+
+# ALRIGHT !

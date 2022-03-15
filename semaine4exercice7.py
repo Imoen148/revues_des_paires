@@ -15,3 +15,6 @@ def nombre_premier():
         print(f"{nb_user} n'est pas un nombre premier")
 
 nombre_premier()
+
+
+# OH yea je viens d'apprendre le \ pour continuer sur une autre ligne !

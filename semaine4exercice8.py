@@ -10,3 +10,6 @@ def ordre_nb():
     return nb_user_1, nb_user_2
 
 print(ordre_nb())
+
+
+# C'est écrit de retourner et ça retourne, alright !
