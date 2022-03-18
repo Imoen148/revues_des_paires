@@ -9,7 +9,7 @@ def nombre_premier():
     if not(1 <= nb_user <= 20):
         print("Attention, vous devez entrer chiffre entre 1 et 20!")
     elif nb_user == 2 or nb_user == 3 or nb_user == 5 or nb_user == 7\
-    or nb_user == 11 or nb_user == 13 or nb_user == 13 or nb_user == 19 :
+    or nb_user == 11 or nb_user == 13 or nb_user == 17 or nb_user == 19 :
         print(f"{nb_user} est un nombre premier")
     else :
         print(f"{nb_user} n'est pas un nombre premier")
