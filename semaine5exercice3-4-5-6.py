@@ -57,6 +57,11 @@ or choix_user == 5:
         fichier_cours_prof.write(prof_user)
         fichier_cours_prof.write("\n")
         fichier_cours_prof.close()
+
+        fichier_cours_prof = open("bdd.txt", encoding='utf8') # mode"r" par défaut
+        for ligne in fichier_cours_prof:
+            print('\n')
+            print(ligne)
 else:
     (print("Attention, vous devez entre 1, 2 ou 3!"))
 
