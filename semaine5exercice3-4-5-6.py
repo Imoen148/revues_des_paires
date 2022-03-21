@@ -63,7 +63,7 @@ or choix_user == 5:
             print('\n')
             print(ligne)
 else:
-    (print("Attention, vous devez entre 1, 2 ou 3!"))
+    (print("Attention, vous devez entre 1, 2, 3, 4 ou 5!"))
 
 # Exercice 4 : 
 #En se basant sur l'exercice 3, créer un fichier bdd.txt fonctionnant comme une base de 
