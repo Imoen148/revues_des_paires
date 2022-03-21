@@ -22,6 +22,7 @@ fichier_cours_prof.write("Système d'exploitation \n")
 fichier_cours_prof.write("Jean-Pierre Fiset \n")
 fichier_cours_prof.write("\n")
 fichier_cours_prof.close()
+fichier_cours_prof = open("bdd.txt", "r", encoding='utf8')
 
 cours = list(cours_prof.values())
 liste_cours_prof = list(cours_prof.items())
