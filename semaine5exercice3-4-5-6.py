@@ -22,7 +22,6 @@ fichier_cours_prof.write("Système d'exploitation \n")
 fichier_cours_prof.write("Jean-Pierre Fiset \n")
 fichier_cours_prof.write("\n")
 fichier_cours_prof.close()
-fichier_cours_prof = open("bdd.txt", "r", encoding='utf8')
 
 cours = list(cours_prof.values())
 liste_cours_prof = list(cours_prof.items())
@@ -45,10 +44,10 @@ or choix_user == 5:
     elif choix_user == 3:
         print(liste_cours_prof[2])
     elif choix_user == 4:
-        recherche_enseignant = input("Entrer le nom de l'enseignant rechercher : ")
-        print(cours_prof.get(recherche_enseignant, "Ce professeur n'existe pas!"))
+        recherche_enseignant = input("\nEntrer le nom de l'enseignant rechercher : ")
+        print(cours_prof.get(recherche_enseignant, "\nCe professeur n'existe pas!"))
     else:
-        prof_user = input("Entrer le nom du nouveau pofesseur : ")
+        prof_user = input("\nEntrer le nom du nouveau pofesseur : ")
         cours_user = input("Entrer le nom du nouveau cours associé : ")
         cours_prof[prof_user] = cours_user
 
