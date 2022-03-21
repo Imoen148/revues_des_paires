@@ -27,13 +27,13 @@ cours = list(cours_prof.values())
 liste_cours_prof = list(cours_prof.items())
 
 print("Sélectionner un cours pour connaitre le nom du professeur, faites \
-une recherche par enseignant ou ajouter un professeur et son cours \
+une recherche par enseignant \nou ajouter un professeur et son cours \
 associés.")
-print("1-", cours[0])
-print("2-", cours[1])
-print("3-", cours[2])
-print("4- Recherche par enseignant")
-print("5- Ajout enseignant/cours")
+print("\t 1-", cours[0])
+print("\t 2-", cours[1])
+print("\t 3-", cours[2])
+print("\t 4- Recherche par enseignant")
+print("\t 5- Ajout enseignant/cours")
 choix_user = int(input("Entrer 1, 2, 3, 4 ou 5 : "))
 if choix_user == 1 or choix_user == 2 or choix_user == 3 or choix_user == 4\
 or choix_user == 5:
