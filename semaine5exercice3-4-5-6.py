@@ -7,63 +7,73 @@
 # d'en sélectionner 1. Lorsque l'utilisateur à fait sa sélection, afficher le nom de
 # l'enseignant et le nom du cours à l'écran.
 
+def fichier_depart(cours_prof):
+    cours = list(cours_prof.values())
+    prof = list(cours_prof.keys())
+    liste_cours_prof = list(cours_prof.items())
+    
+    fichier_cours_prof = open("bdd.txt", "w", encoding='utf8')
+    fichier_cours_prof.write(cours[0] + "\n")
+    fichier_cours_prof.write(prof[0] + "\n")
+    fichier_cours_prof.write("\n")
+    fichier_cours_prof.write(cours[1] + "\n")
+    fichier_cours_prof.write(prof[1] + "\n")
+    fichier_cours_prof.write("\n")
+    fichier_cours_prof.write(cours[2] + "\n")
+    fichier_cours_prof.write(prof[2] + "\n")
+    fichier_cours_prof.write("\n")
+    fichier_cours_prof.close()
+    return cours, prof, liste_cours_prof, fichier_cours_prof
+
+
+def interface_user(cours_prof, cours, liste_cours_prof, fichier_cours_prof):
+    print("Sélectionner un cours pour connaitre le nom du professeur, faites \
+    une recherche par enseignant \nou ajouter un professeur et son cours \
+    associés.")
+    print("\t 1-", cours[0])
+    print("\t 2-", cours[1])
+    print("\t 3-", cours[2])
+    print("\t 4- Recherche par enseignant")
+    print("\t 5- Ajout enseignant/cours")
+   
+    try:
+        choix_user = int(input("Entrer 1, 2, 3, 4 ou 5 : "))          
+    except:
+        print("Attention, vous devez entrer un nombre!")        
+    
+    if choix_user == 1 or choix_user == 2 or choix_user == 3 or choix_user == 4\
+    or choix_user == 5:
+        if choix_user == 1:
+            print(liste_cours_prof[0])
+        elif choix_user == 2:
+            print(liste_cours_prof[1])
+        elif choix_user == 3:
+            print(liste_cours_prof[2])
+        elif choix_user == 4:
+            recherche_enseignant = input("\nEntrer le nom de l'enseignant rechercher : ")
+            print(cours_prof.get(recherche_enseignant, "\nCe professeur n'existe pas!"))
+        else:
+            prof_user = input("\nEntrer le nom du nouveau pofesseur : ")
+            cours_user = input("Entrer le nom du nouveau cours associé : ")
+            # Ajouter au dictionnaire
+            cours_prof[prof_user] = cours_user
+
+            # Ajouter les informations aux fichiers
+            fichier_cours_prof = open("bdd.txt", "a", encoding='utf8')
+            fichier_cours_prof.write(cours_user)
+            fichier_cours_prof.write("\n")
+            fichier_cours_prof.write(prof_user)
+            fichier_cours_prof.write("\n")
+            fichier_cours_prof.close()            
+    else:
+        (print("Attention, vous devez entrer 1, 2, 3, 4 ou 5!"))
+
 cours_prof = {"Keven Presseau-St-Laurent" : "Concepts de programmation 1",\
 "Emma Senez-Parent" : "Logique Mathématique pour les professionnels de \
 l'informatique", "Jean-Pierre Fiset" : "Système d'exploitation"}
 
-fichier_cours_prof = open("bdd.txt", "w", encoding='utf8')
-fichier_cours_prof.write("Concepts de programmation 1 \n")
-fichier_cours_prof.write("Keven Presseau-St-Laurent \n")
-fichier_cours_prof.write("\n")
-fichier_cours_prof.write("Logique Mathématique pour les professionnels de l'informatique \n")
-fichier_cours_prof.write("Emma Senez-Parent \n")
-fichier_cours_prof.write("\n")
-fichier_cours_prof.write("Système d'exploitation \n")
-fichier_cours_prof.write("Jean-Pierre Fiset \n")
-fichier_cours_prof.write("\n")
-fichier_cours_prof.close()
-
-cours = list(cours_prof.values())
-liste_cours_prof = list(cours_prof.items())
-
-print("Sélectionner un cours pour connaitre le nom du professeur, faites \
-une recherche par enseignant \nou ajouter un professeur et son cours \
-associés.")
-print("\t 1-", cours[0])
-print("\t 2-", cours[1])
-print("\t 3-", cours[2])
-print("\t 4- Recherche par enseignant")
-print("\t 5- Ajout enseignant/cours")
-choix_user = int(input("Entrer 1, 2, 3, 4 ou 5 : "))
-if choix_user == 1 or choix_user == 2 or choix_user == 3 or choix_user == 4\
-or choix_user == 5:
-    if choix_user == 1:
-        print(liste_cours_prof[0])
-    elif choix_user == 2:
-        print(liste_cours_prof[1])
-    elif choix_user == 3:
-        print(liste_cours_prof[2])
-    elif choix_user == 4:
-        recherche_enseignant = input("\nEntrer le nom de l'enseignant rechercher : ")
-        print(cours_prof.get(recherche_enseignant, "\nCe professeur n'existe pas!"))
-    else:
-        prof_user = input("\nEntrer le nom du nouveau pofesseur : ")
-        cours_user = input("Entrer le nom du nouveau cours associé : ")
-        cours_prof[prof_user] = cours_user
-
-        fichier_cours_prof = open("bdd.txt", "a", encoding='utf8')
-        fichier_cours_prof.write(cours_user)
-        fichier_cours_prof.write("\n")
-        fichier_cours_prof.write(prof_user)
-        fichier_cours_prof.write("\n")
-        fichier_cours_prof.close()
-
-        fichier_cours_prof = open("bdd.txt", encoding='utf8') # mode"r" par défaut
-        for ligne in fichier_cours_prof:
-            print('\n')
-            print(ligne)
-else:
-    (print("Attention, vous devez entre 1, 2, 3, 4 ou 5!"))
+cours, prof, liste_cours_prof, fichier_cours_prof = fichier_depart(cours_prof)
+interface_user(cours_prof, cours, liste_cours_prof, fichier_cours_prof)
 
 # Exercice 4 : 
 #En se basant sur l'exercice 3, créer un fichier bdd.txt fonctionnant comme une base de 
