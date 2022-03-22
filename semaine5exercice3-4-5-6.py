@@ -102,3 +102,17 @@ interface_user(cours_prof, cours, liste_cours_prof, fichier_cours_prof)
 # Revue de paires:
 # Utilisez l'exercice 3-6 pour faire la revue des paires. Publiez vos exercices 
 # dans le «repo» revue_des_paires de la semaine précédente pour effectuer la remise.
+
+
+
+# open() mode "read" par défaut, cool !
+#
+# Tu peux remplacer 
+# if choix_user == 1 or choix_user == 2 or choix_user == 3 or choix_user == 4 or choix_user == 5:
+# par
+# if 1 <= choix_user <= 5
+#
+# Je ne sais pas vraiment ce qu'est l'exercice 3 ou 4 ou 5 ou 6, mais pas grave, j'ai compris :)
+#
+# YEAH!
+
