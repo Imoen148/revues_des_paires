@@ -41,8 +41,7 @@ def interface_user(cours_prof, cours, liste_cours_prof, fichier_cours_prof):
     except:
         print("Attention, vous devez entrer un nombre!")        
     
-    if choix_user == 1 or choix_user == 2 or choix_user == 3 or choix_user == 4\
-    or choix_user == 5:
+    if 1 <= choix_user <= 5:
         if choix_user == 1:
             print(liste_cours_prof[0])
         elif choix_user == 2:
