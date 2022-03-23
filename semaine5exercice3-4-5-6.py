@@ -51,17 +51,7 @@ def interface_user(cours_prof, cours, liste_cours_prof, fichier_cours_prof):
             print(liste_cours_prof[2])
         elif choix_user == 4:
             recherche_enseignant = input("\nEntrer le nom de l'enseignant rechercher : ")
-            fichier_cours_prof = open("bdd.txt", encoding='utf8')
-            for recherche_enseignant in fichier_cours_prof:
-                print(recherche_enseignant)
-                fichier_cours_prof.close()
-            else:
-                print("Cet enseignant n'est pas dans le répertoire")
-                fichier_cours_prof.close()
-            
-
-            # Recherche a partir du dictionnaire : 
-            # print(cours_prof.get(recherche_enseignant, "\nCe professeur n'existe pas!"))
+            print(cours_prof.get(recherche_enseignant, "\nCe professeur n'existe pas!"))
         else:
             prof_user = input("\nEntrer le nom du nouveau pofesseur : ")
             cours_user = input("Entrer le nom du nouveau cours associé : ")
