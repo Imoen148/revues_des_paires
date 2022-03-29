@@ -1,0 +1,9 @@
+Vos entrées sont : 4.0, 5.0, 3.0, 6.0, 
+
+Vos entrées en ordre croissant sont : [3.0, 4.0, 5.0, 6.0] 
+Vos entrées en ordre décroissant sont : [6.0, 5.0, 4.0, 3.0] 
+Votre entrée minimum est : 3.0 
+Votre entrée maximum est : 6.0 
+La moyenne de vos entrée est : 4.5 
+La médianne de vos entrée est : 4.0 
+Le mode de vos entrée est : None 

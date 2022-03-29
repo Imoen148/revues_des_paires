@@ -24,10 +24,7 @@
 def liste_ordre_croissant(liste_entree_user):
     liste_ordre_croissant = []
     while liste_entree_user:
-        nombre_min = liste_entree_user[0]
-        for i in liste_entree_user:
-            if i < nombre_min:
-                nombre_min = i
+        nombre_min = minimum_liste(liste_entree_user)
         liste_entree_user.remove(nombre_min)
         liste_ordre_croissant.append(nombre_min)
     return liste_ordre_croissant
@@ -36,10 +33,7 @@ def liste_ordre_croissant(liste_entree_user):
 def liste_ordre_decroissant(liste_entree_user):
     liste_ordre_decroissant = []
     while liste_entree_user:
-        nombre_max = liste_entree_user[0]
-        for i in liste_entree_user:
-            if i > nombre_max:
-                nombre_max = i
+        nombre_max = maximum_liste(liste_entree_user)
         liste_entree_user.remove(nombre_max)
         liste_ordre_decroissant.append(nombre_max)
     return liste_ordre_decroissant
@@ -97,8 +91,7 @@ def mode_liste(liste_entree_user):
                 nb_pareil = i
                 fois_pareil = 1
         elif i == nb_pareil :
-            fois_pareil = fois_pareil + 1
-            fois_pareil_max = fois_pareil
+            fois_pareil = fois_pareil + 1            
     if fois_pareil_max == 1:
         return "None"
     else:
@@ -110,7 +103,7 @@ def entree_user():
     choix_user = 1
 
     nom_fichier_user = input("Entrer un nom de fichier : ")
-    fichier_user = open(f"exercices\{nom_fichier_user}.txt", "w", encoding="utf8")
+    fichier_user = open(f"{nom_fichier_user}.txt", "w", encoding="utf8")
     fichier_user.writelines("Vos entrées sont : ")
 
     while choix_user != 0:
