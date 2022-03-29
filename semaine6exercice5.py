@@ -76,7 +76,7 @@ def mediane_liste(liste_entree_user):
         nb_med_2 = int(nb_med_1 + 1)
         return (liste_entree_user[nb_med_1] + liste_entree_user[nb_med_2]) / 2   
     else:
-        nb_med_1 = int((len(liste_entree_user) + 1)/2 - 1)
+        nb_med_1 = int((len(liste_entree_user) - 1)/2)
         return liste_entree_user[nb_med_1]
 
 
